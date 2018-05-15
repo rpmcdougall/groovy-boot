@@ -1,0 +1,35 @@
+databaseChangeLog:
+    - changeSet:
+        id: 2018515-01
+        author: Ryan McDougall
+        changes:
+        - createTable:
+            tableName: notes
+            columns:
+               - column:
+                   name: id
+                   type: integer
+                   autoIncrement: true
+                   constraints:
+                     primaryKey: true
+                     nullable: false
+               - column:
+                   name: title
+                   type: varchar(255)
+                   constraints:
+                     nullable: false
+               - column:
+                   name: content
+                   type: varchar(255)
+                   constraints:
+                     nullable: false
+               - column:
+                   name: created_at
+                   type: timestamp
+                   constraints:
+                     nullable: false
+               - column:
+                   name: updated_at
+                   type: timestamp
+                   constraints:
+                     nullable: false
